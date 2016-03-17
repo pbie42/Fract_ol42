@@ -6,7 +6,7 @@
 /*   By: pbie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/15 14:05:51 by pbie              #+#    #+#             */
-/*   Updated: 2016/03/17 11:42:50 by pbie             ###   ########.fr       */
+/*   Updated: 2016/03/17 13:36:18 by pbie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void			ft_init_mandel(t_mlx *m)
 void			ft_mandelbrot(t_mlx *m)
 {
 	m->x = -1;
-	while (++m->x < m->im_x && m->x < WIN_X)
+	while (++m->x < m->im_x && m->x < FRAC_X)
 	{
 		m->y = -1;
 		while (++m->y < m->im_y && m->y < WIN_Y)

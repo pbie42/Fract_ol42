@@ -6,7 +6,7 @@
 /*   By: pbie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/15 15:27:22 by pbie              #+#    #+#             */
-/*   Updated: 2016/03/17 11:47:59 by pbie             ###   ########.fr       */
+/*   Updated: 2016/03/17 14:26:58 by pbie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,9 @@ int				ft_key_binding(int keycode, t_mlx *m)
 	if (keycode == ONE1 || keycode == ONE2 || keycode == TWO1
 			|| keycode == TWO2)
 		ft_fractol_init(m);
+	if (m->check == 0)
+		ft_putset(m);
+	m->check = 1;
 	return (0);
 }
 
@@ -61,8 +64,10 @@ void			ft_key_action(t_mlx *m)
 
 int				ft_keycore(t_mlx *m)
 {
+	if (m->check == 0)
+		return (0);
 	mlx_destroy_image(m->mlx, m->im);
-	m->im = mlx_new_image(m->mlx, WIN_X, WIN_Y);
+	m->im = mlx_new_image(m->mlx, FRAC_X, WIN_Y);
 	ft_key_action(m);
 	ft_print_fractol(m);
 	mlx_put_image_to_window(m->mlx, m->win, m->im, 0, 0);

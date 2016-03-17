@@ -6,7 +6,7 @@
 /*   By: pbie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/15 16:54:17 by pbie              #+#    #+#             */
-/*   Updated: 2016/03/17 11:43:54 by pbie             ###   ########.fr       */
+/*   Updated: 2016/03/17 13:37:34 by pbie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,10 @@ void			ft_julia(t_mlx *m)
 
 int				ft_julia_hook(int x, int y, t_mlx *m)
 {
-	if (!(ft_strcmp(m->argv, "julia")) && x <= WIN_X && y <= WIN_Y
+	if (!(ft_strcmp(m->argv, "julia")) && x <= FRAC_X && y <= WIN_Y
 			&& x > 0 && y > 0 && m->bj == 0)
 	{
-		m->c_r = (float)(x + 400 - WIN_X) / 300;
+		m->c_r = (float)(x + 400 - FRAC_X) / 300;
 		m->c_i = (float)(y + 320 - WIN_Y) / 300;
 	}
 	return (1);

@@ -6,14 +6,15 @@
 /*   By: pbie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 18:06:29 by pbie              #+#    #+#             */
-/*   Updated: 2016/03/17 11:45:11 by pbie             ###   ########.fr       */
+/*   Updated: 2016/03/17 14:49:05 by pbie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FDF_H
 # define FDF_H
-# define WIN_X 800
+# define WIN_X 1200
 # define WIN_Y 600
+# define FRAC_X 800
 # define UP_ARROW 126
 # define DOWN_ARROW 125
 # define RIGHT_ARROW 124
@@ -38,18 +39,18 @@
 # define HOLD 4
 # define HELLO "Fractol by pbie"
 # define START "Continue by pressing any key"
-# define L_CONTROLS "             CONTROLS"
-# define L_UP "  Move Up       ||     Up"
-# define L_DOWN "  Move Down     ||     Down"
-# define L_LEFT "  Move Left     ||     Left"
-# define L_RIGHT "  Move Right    ||     Right"
-# define L_PLUS "  Zoom In       ||     +"
-# define L_MINUS "  Zoom Out      ||     -"
-# define L_PAGE_UP "  Increase      ||     Page Up"
-# define L_PAGE_DOWN "  Decrease      ||     Page Down"
-# define L_HOME "  Psychadelic   ||     Home"
-# define L_RESET "  Reset         ||     Enter"
-# define L_ESC "  Exit          ||     Esc"
+# define L_CONTROLS "                 CONTROLS"
+# define L_PLUS "  More Iterations   ||     +"
+# define L_MINUS "  Less Iterations   ||     -"
+# define L_PAGE_UP "  Zoom In           ||  Left Click"
+# define L_PAGE_DOWN "  Zoom Out          ||  Right Click"
+# define L_MANDEL "  Mandelbrot        ||  Press 1"
+# define L_JULIA "  Julia             ||  Press 2"
+# define L_MANDALT "  MandelALT         ||  Press 3"
+# define L_TRANS "  Transform Julia   ||  Move Mouse"
+# define L_HOLD "  Prevent Transform  ||  Hold H"
+# define L_RESET "  Reset             ||  Return / Enter"
+# define L_ESC "  Exit              ||  Esc"
 # define KEYPRESS 2
 # define KEYPRESSMASK (1L<<0)
 # define KEYRELEASE 3
@@ -96,6 +97,7 @@ typedef struct		s_mlx
 	float			tmpy;
 	float			tmpx2;
 	float			tmpy2;
+	int				check;
 }					t_mlx;
 
 void				ft_put_pixel(t_mlx *m, int x, int y, int color);
@@ -104,6 +106,7 @@ int					ft_key_binding(int keycode, t_mlx *m);
 int					ft_key_release(int keycode, t_mlx *m);
 void				ft_key_action(t_mlx *m);
 int					ft_mouse_hook(int keycode, int x, int y, t_mlx *m);
+void				ft_putset(t_mlx *mlx);
 void				ft_fractol_init(t_mlx *m);
 void				ft_print_fractol(t_mlx *m);
 void				ft_init_mandel(t_mlx *m);
