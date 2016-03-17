@@ -6,7 +6,7 @@
 /*   By: pbie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 18:06:29 by pbie              #+#    #+#             */
-/*   Updated: 2016/03/17 14:49:05 by pbie             ###   ########.fr       */
+/*   Updated: 2016/03/17 14:52:44 by pbie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@
 # define L_JULIA "  Julia             ||  Press 2"
 # define L_MANDALT "  MandelALT         ||  Press 3"
 # define L_TRANS "  Transform Julia   ||  Move Mouse"
-# define L_HOLD "  Prevent Transform  ||  Hold H"
+# define L_HOLD "  Prevent Transform ||  Hold H"
 # define L_RESET "  Reset             ||  Return / Enter"
 # define L_ESC "  Exit              ||  Esc"
 # define KEYPRESS 2

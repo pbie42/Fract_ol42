@@ -6,7 +6,7 @@
 /*   By: pbie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/10 15:57:30 by pbie              #+#    #+#             */
-/*   Updated: 2016/03/17 14:50:08 by pbie             ###   ########.fr       */
+/*   Updated: 2016/03/17 14:52:29 by pbie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ void			ft_putset(t_mlx *mlx)
 	mlx_string_put(mlx->mlx, mlx->win, FRAC_X, y + 160, 0xccccff, L_JULIA);
 	mlx_string_put(mlx->mlx, mlx->win, FRAC_X, y + 176, 0xccccff, L_MANDALT);
 	mlx_string_put(mlx->mlx, mlx->win, FRAC_X, y + 192, 0xccccff, L_TRANS);
-	mlx_string_put(mlx->mlx, mlx->win, FRAC_X, y + 176, 0xccccff, L_HOLD);
-	mlx_string_put(mlx->mlx, mlx->win, FRAC_X, y + 192, 0xccccff, L_RESET);
-	mlx_string_put(mlx->mlx, mlx->win, FRAC_X, y + 208, 0xccccff, L_ESC);
+	mlx_string_put(mlx->mlx, mlx->win, FRAC_X, y + 208, 0xccccff, L_HOLD);
+	mlx_string_put(mlx->mlx, mlx->win, FRAC_X, y + 224, 0xccccff, L_RESET);
+	mlx_string_put(mlx->mlx, mlx->win, FRAC_X, y + 240, 0xccccff, L_ESC);
 }
 
 void			ft_fractol_init(t_mlx *m)
