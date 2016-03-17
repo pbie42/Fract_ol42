@@ -6,7 +6,7 @@
 /*   By: pbie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/15 17:48:44 by pbie              #+#    #+#             */
-/*   Updated: 2016/03/17 14:20:29 by pbie             ###   ########.fr       */
+/*   Updated: 2016/03/17 18:24:59 by pbie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 void			ft_zoom_in(int x, int y, t_mlx *m)
 {
 	m->zoom *= 2;
-	m->tmpx = m->x1 + x * (m->x2 - m->x1) / FRAC_X;
-	m->tmpy = m->y1 + y * (m->y2 - m->y1) / WIN_Y;
+	m->tmpx = m->x1 + x * (m->x2 - m->x1) / (FRAC_X - 10);
+	m->tmpy = m->y1 + y * (m->y2 - m->y1) / (WIN_Y - 70);
 	m->tmpx2 = m->x1;
 	m->tmpy2 = m->y1;
 	m->x1 = m->tmpx - (m->x2 - m->x1) / 4;

@@ -6,7 +6,7 @@
 #    By: pbie <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/01/15 11:55:43 by pbie              #+#    #+#              #
-#    Updated: 2016/03/17 11:21:37 by pbie             ###   ########.fr        #
+#    Updated: 2016/03/17 17:17:03 by pbie             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,8 @@ SRC = main.c \
 	  julia.c \
 	  ft_put_pixel.c \
 	  keybinding.c \
-	  zoom.c
+	  zoom.c \
+	  settings.c
 
 OBJ = $(SRC:.c=.o)
 

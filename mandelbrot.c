@@ -6,7 +6,7 @@
 /*   By: pbie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/15 14:05:51 by pbie              #+#    #+#             */
-/*   Updated: 2016/03/17 15:27:41 by pbie             ###   ########.fr       */
+/*   Updated: 2016/03/17 17:37:51 by pbie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void			ft_init_mandel(t_mlx *m)
 	m->zoom = 250;
 	m->im_x = (m->x2 - m->x1) * m->zoom + 150 + WIN_X - FRAC_X;
 	m->im_y = (m->y2 - m->y1) * m->zoom;
-	m->max = 150;
+	m->max = 90;
 }
 
 void			ft_mandelbrot(t_mlx *m)

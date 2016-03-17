@@ -6,7 +6,7 @@
 /*   By: pbie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 18:06:29 by pbie              #+#    #+#             */
-/*   Updated: 2016/03/17 14:52:44 by pbie             ###   ########.fr       */
+/*   Updated: 2016/03/17 17:16:42 by pbie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,5 +116,7 @@ void				ft_julia(t_mlx *m);
 int					ft_julia_hook(int x, int y, t_mlx *m);
 void				ft_init_mandelbralt(t_mlx *m);
 void				ft_mandelbralt(t_mlx *m);
+void				ft_julia_set(t_mlx *m);
+void				ft_settings(t_mlx *m);
 
 #endif

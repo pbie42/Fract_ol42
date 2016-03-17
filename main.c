@@ -6,30 +6,11 @@
 /*   By: pbie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/10 15:57:30 by pbie              #+#    #+#             */
-/*   Updated: 2016/03/17 14:52:29 by pbie             ###   ########.fr       */
+/*   Updated: 2016/03/17 17:31:34 by pbie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
-
-void			ft_putset(t_mlx *mlx)
-{
-	int			y;
-
-	y = 0;
-	mlx_string_put(mlx->mlx, mlx->win, FRAC_X, y + 32, 0xccccff, L_CONTROLS);
-	mlx_string_put(mlx->mlx, mlx->win, FRAC_X, y + 80, 0xccccff, L_PAGE_UP);
-	mlx_string_put(mlx->mlx, mlx->win, FRAC_X, y + 96, 0xccccff, L_PAGE_DOWN);
-	mlx_string_put(mlx->mlx, mlx->win, FRAC_X, y + 112, 0xccccff, L_PLUS);
-	mlx_string_put(mlx->mlx, mlx->win, FRAC_X, y + 128, 0xccccff, L_MINUS);
-	mlx_string_put(mlx->mlx, mlx->win, FRAC_X, y + 144, 0xccccff, L_MANDEL);
-	mlx_string_put(mlx->mlx, mlx->win, FRAC_X, y + 160, 0xccccff, L_JULIA);
-	mlx_string_put(mlx->mlx, mlx->win, FRAC_X, y + 176, 0xccccff, L_MANDALT);
-	mlx_string_put(mlx->mlx, mlx->win, FRAC_X, y + 192, 0xccccff, L_TRANS);
-	mlx_string_put(mlx->mlx, mlx->win, FRAC_X, y + 208, 0xccccff, L_HOLD);
-	mlx_string_put(mlx->mlx, mlx->win, FRAC_X, y + 224, 0xccccff, L_RESET);
-	mlx_string_put(mlx->mlx, mlx->win, FRAC_X, y + 240, 0xccccff, L_ESC);
-}
 
 void			ft_fractol_init(t_mlx *m)
 {
@@ -80,6 +61,6 @@ int				main(int argc, char **argv)
 		mlx_loop(m.mlx);
 	}
 	else
-		ft_exit("Error: Wrong Number of Arguments");
+		ft_exit("Please Enter 'mandelbrot', 'julia', or 'mandelbralt'");
 	return (0);
 }
