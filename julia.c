@@ -6,7 +6,7 @@
 /*   By: pbie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/15 16:54:17 by pbie              #+#    #+#             */
-/*   Updated: 2016/03/15 17:42:42 by pbie             ###   ########.fr       */
+/*   Updated: 2016/03/17 11:43:54 by pbie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void			ft_julia(t_mlx *m)
 			if (m->i == m->max)
 				ft_put_pixel(m, m->x, m->y, 0xFFFFFF);
 			else
-				ft_put_pixel(m, m->x, m->y, m->i * 1895750);
+				ft_put_pixel(m, m->x, m->y, m->i * 1835750);
 		}
 	}
 }

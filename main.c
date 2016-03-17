@@ -6,7 +6,7 @@
 /*   By: pbie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/10 15:57:30 by pbie              #+#    #+#             */
-/*   Updated: 2016/03/15 17:33:58 by pbie             ###   ########.fr       */
+/*   Updated: 2016/03/17 11:29:00 by pbie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void			ft_fractol_init(t_mlx *m)
 		ft_init_mandel(m);
 	if (!(ft_strcmp(m->argv, "julia")))
 		ft_init_julia(m);
+	if (!(ft_strcmp(m->argv, "mandelbralt")))
+		ft_init_mandelbralt(m);
 }
 
 void			ft_print_fractol(t_mlx *m)
@@ -26,6 +28,8 @@ void			ft_print_fractol(t_mlx *m)
 		ft_mandelbrot(m);
 	if (!(ft_strcmp(m->argv, "julia")))
 		ft_julia(m);
+	if (!(ft_strcmp(m->argv, "mandelbralt")))
+		ft_mandelbralt(m);
 }
 
 int				main(int argc, char **argv)
@@ -36,7 +40,8 @@ int				main(int argc, char **argv)
 
 	m.argv = argv[1];
 	if (argc == 2 && ((!(ft_strcmp(m.argv, "mandelbrot")))
-			|| (!(ft_strcmp(m.argv, "julia")))))
+			|| (!(ft_strcmp(m.argv, "julia")))
+			|| (!(ft_strcmp(m.argv, "mandelbralt")))))
 	{
 		ft_putendl(argv[1]);
 		c_x = WIN_X * 2 / 5;
@@ -52,6 +57,7 @@ int				main(int argc, char **argv)
 		mlx_hook(m.win, MOTIONNOTIFY, POINTERMOTIONMASK, ft_julia_hook, &m);
 		mlx_hook(m.win, KEYPRESS, KEYPRESSMASK, ft_key_binding, &m);
 		mlx_hook(m.win, KEYRELEASE, KEYRELEASEMASK, ft_key_release, &m);
+		mlx_mouse_hook(m.win, ft_mouse_hook, &m);
 		mlx_loop_hook(m.mlx, ft_keycore, &m);
 		mlx_loop(m.mlx);
 	}

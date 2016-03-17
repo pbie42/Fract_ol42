@@ -6,7 +6,7 @@
 #    By: pbie <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/01/15 11:55:43 by pbie              #+#    #+#              #
-#    Updated: 2016/03/15 17:31:58 by pbie             ###   ########.fr        #
+#    Updated: 2016/03/17 11:21:37 by pbie             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,9 +16,11 @@ CFLAGS = -Wall -Werror -Wextra -I includes
 
 SRC = main.c \
 	  mandelbrot.c \
+	  mandelbralt.c \
 	  julia.c \
 	  ft_put_pixel.c \
-	  keybinding.c
+	  keybinding.c \
+	  zoom.c
 
 OBJ = $(SRC:.c=.o)
 

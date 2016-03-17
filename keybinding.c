@@ -6,7 +6,7 @@
 /*   By: pbie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/15 15:27:22 by pbie              #+#    #+#             */
-/*   Updated: 2016/03/15 17:48:27 by pbie             ###   ########.fr       */
+/*   Updated: 2016/03/17 11:47:59 by pbie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,20 @@
 
 int				ft_key_binding(int keycode, t_mlx *m)
 {
+	if (keycode == PLUS1 || keycode == PLUS2)
+		m->itm = 1;
+	if (keycode == MINUS1 || keycode == MINUS2)
+		m->itm = -1;
 	if (keycode == ENTER || keycode == RETURN)
 		m->res = 1;
+	if (keycode == HOLD)
+		m->bj = 1;
 	if (keycode == ONE1 || keycode == ONE2)
 		m->argv = "mandelbrot";
 	if (keycode == TWO1 || keycode == TWO2)
 		m->argv = "julia";
+	if (keycode == THREE1 || keycode == THREE2)
+		m->argv = "mandelbralt";
 	if (keycode == ONE1 || keycode == ONE2 || keycode == TWO1
 			|| keycode == TWO2)
 		ft_fractol_init(m);
@@ -30,6 +38,12 @@ int				ft_key_release(int keycode, t_mlx *m)
 {
 	if (keycode == ESC_KEY)
 		exit(0);
+	if (keycode == PLUS1 || keycode == PLUS2)
+		m->itm = 0;
+	if (keycode == MINUS1 || keycode == MINUS2)
+		m->itm = 0;
+	if (keycode == HOLD)
+		m->bj = 0;
 	if (keycode == RETURN || keycode == ENTER)
 		m->res = 0;
 	return (0);

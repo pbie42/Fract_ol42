@@ -6,7 +6,7 @@
 /*   By: pbie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 18:06:29 by pbie              #+#    #+#             */
-/*   Updated: 2016/03/15 17:44:05 by pbie             ###   ########.fr       */
+/*   Updated: 2016/03/17 11:45:11 by pbie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 # define DOWN_ARROW 125
 # define RIGHT_ARROW 124
 # define LEFT_ARROW 123
-# define MINUS 27
-# define PLUS 24
+# define MINUS1 27
+# define PLUS1 24
 # define MINUS2 78
 # define PLUS2 69
 # define ESC_KEY 53
@@ -33,6 +33,9 @@
 # define ONE2 83
 # define TWO1 19
 # define TWO2 84
+# define THREE1 20
+# define THREE2 85
+# define HOLD 4
 # define HELLO "Fractol by pbie"
 # define START "Continue by pressing any key"
 # define L_CONTROLS "             CONTROLS"
@@ -100,6 +103,7 @@ int					ft_keycore(t_mlx *m);
 int					ft_key_binding(int keycode, t_mlx *m);
 int					ft_key_release(int keycode, t_mlx *m);
 void				ft_key_action(t_mlx *m);
+int					ft_mouse_hook(int keycode, int x, int y, t_mlx *m);
 void				ft_fractol_init(t_mlx *m);
 void				ft_print_fractol(t_mlx *m);
 void				ft_init_mandel(t_mlx *m);
@@ -107,5 +111,7 @@ void				ft_mandelbrot(t_mlx *m);
 void				ft_init_julia(t_mlx *m);
 void				ft_julia(t_mlx *m);
 int					ft_julia_hook(int x, int y, t_mlx *m);
+void				ft_init_mandelbralt(t_mlx *m);
+void				ft_mandelbralt(t_mlx *m);
 
 #endif
