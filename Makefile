@@ -6,7 +6,7 @@
 #    By: pbie <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/01/15 11:55:43 by pbie              #+#    #+#              #
-#    Updated: 2016/03/17 17:17:03 by pbie             ###   ########.fr        #
+#    Updated: 2016/03/18 17:26:18 by pbie             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ SRC = main.c \
 	  mandelbrot.c \
 	  mandelbralt.c \
 	  julia.c \
+	  burningship.c \
 	  ft_put_pixel.c \
 	  keybinding.c \
 	  zoom.c \

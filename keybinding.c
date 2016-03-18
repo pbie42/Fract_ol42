@@ -6,7 +6,7 @@
 /*   By: pbie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/15 15:27:22 by pbie              #+#    #+#             */
-/*   Updated: 2016/03/17 17:19:21 by pbie             ###   ########.fr       */
+/*   Updated: 2016/03/18 17:25:54 by pbie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,11 @@ int				ft_key_binding(int keycode, t_mlx *m)
 		m->argv = "julia";
 	if (keycode == THREE1 || keycode == THREE2)
 		m->argv = "mandelbralt";
+	if (keycode == FOUR1 || keycode == FOUR2)
+		m->argv = "burningship";
 	if (keycode == ONE1 || keycode == ONE2 || keycode == TWO1
-			|| keycode == TWO2 || keycode == THREE1 || keycode == THREE2)
+			|| keycode == TWO2 || keycode == THREE1 || keycode == THREE2
+			|| keycode == FOUR1 || keycode == FOUR2)
 		ft_fractol_init(m);
 	if (m->check == 0)
 		ft_putset(m);

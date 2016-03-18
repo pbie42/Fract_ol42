@@ -6,7 +6,7 @@
 /*   By: pbie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 18:06:29 by pbie              #+#    #+#             */
-/*   Updated: 2016/03/17 17:16:42 by pbie             ###   ########.fr       */
+/*   Updated: 2016/03/18 18:22:19 by pbie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@
 # define TWO2 84
 # define THREE1 20
 # define THREE2 85
+# define FOUR1 21
+# define FOUR2 86
 # define HOLD 4
 # define HELLO "Fractol by pbie"
 # define START "Continue by pressing any key"
@@ -47,6 +49,7 @@
 # define L_MANDEL "  Mandelbrot        ||  Press 1"
 # define L_JULIA "  Julia             ||  Press 2"
 # define L_MANDALT "  MandelALT         ||  Press 3"
+# define L_BURN "  Burning Ship      ||  Press 4"
 # define L_TRANS "  Transform Julia   ||  Move Mouse"
 # define L_HOLD "  Prevent Transform ||  Hold H"
 # define L_RESET "  Reset             ||  Return / Enter"
@@ -67,7 +70,7 @@ typedef struct		s_mlx
 	void			*mlx;
 	void			*win;
 	void			*im;
-	void			*imc;
+	char			*imc;
 	int				imlen;
 	int				bpp;
 	int				endi;
@@ -118,5 +121,7 @@ void				ft_init_mandelbralt(t_mlx *m);
 void				ft_mandelbralt(t_mlx *m);
 void				ft_julia_set(t_mlx *m);
 void				ft_settings(t_mlx *m);
+void				ft_init_burnship(t_mlx *m);
+void				ft_burnship(t_mlx *m);
 
 #endif
