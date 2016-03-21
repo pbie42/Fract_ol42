@@ -6,7 +6,7 @@
 /*   By: pbie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/15 17:48:44 by pbie              #+#    #+#             */
-/*   Updated: 2016/03/18 18:19:03 by pbie             ###   ########.fr       */
+/*   Updated: 2016/03/21 14:53:33 by pbie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,15 @@ void			ft_zoom_out(int x, int y, t_mlx *m)
 
 int				ft_mouse_hook(int keycode, int x, int y, t_mlx *m)
 {
-	if (y > 0)
+	if (!(m->check))
+		ft_settings(m);
+	if (y > 0 && m->check)
 	{
 		if ((keycode == 1 || keycode == 5) && x <= FRAC_X)
 			ft_zoom_in(x, y, m);
 		if ((keycode == 2 || keycode == 4) && x <= FRAC_X)
 			ft_zoom_out(x, y, m);
 	}
+	m->check = 1;
 	return (1);
 }
