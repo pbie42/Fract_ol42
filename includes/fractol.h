@@ -6,12 +6,12 @@
 /*   By: pbie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 18:06:29 by pbie              #+#    #+#             */
-/*   Updated: 2016/03/18 18:22:19 by pbie             ###   ########.fr       */
+/*   Updated: 2016/03/21 14:41:04 by pbie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FDF_H
-# define FDF_H
+#ifndef FRACTOL_H
+# define FRACTOL_H
 # define WIN_X 1200
 # define WIN_Y 600
 # define FRAC_X 800

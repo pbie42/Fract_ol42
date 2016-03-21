@@ -6,7 +6,7 @@
 /*   By: pbie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/10 15:57:30 by pbie              #+#    #+#             */
-/*   Updated: 2016/03/18 18:15:21 by pbie             ###   ########.fr       */
+/*   Updated: 2016/03/21 14:38:41 by pbie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,6 @@ void			ft_print_fractol(t_mlx *m)
 int				main(int argc, char **argv)
 {
 	t_mlx		m;
-	int			c_x;
-	int			c_y;
 
 	m.argv = argv[1];
 	if (argc == 2 && ((!(ft_strcmp(m.argv, "mandelbrot")))
@@ -48,14 +46,12 @@ int				main(int argc, char **argv)
 			|| (!(ft_strcmp(m.argv, "mandelbralt")))
 			|| (!(ft_strcmp(m.argv, "burningship")))))
 	{
-		c_x = WIN_X * 2 / 5;
-		c_y = WIN_Y * 2 / 5;
 		m.mlx = mlx_init();
 		m.win = mlx_new_window(m.mlx, WIN_X, WIN_Y, "fractol");
 		m.im = mlx_new_image(m.mlx, FRAC_X, WIN_Y);
 		m.imc = mlx_get_data_addr(m.im, &m.bpp, &m.imlen, &m.endi);
-		mlx_string_put(m.mlx, m.win, c_x + 40, c_y, 0x009999FF, HELLO);
-		mlx_string_put(m.mlx, m.win, c_x - 20, c_y + 30, 0x009999FF, START);
+		mlx_string_put(m.mlx, m.win, 520, 240, 0x009999FF, HELLO);
+		mlx_string_put(m.mlx, m.win, 460, 270, 0x009999FF, START);
 		ft_fractol_init(&m);
 		mlx_hook(m.win, MOTIONNOTIFY, POINTERMOTIONMASK, ft_julia_hook, &m);
 		mlx_hook(m.win, KEYPRESS, KEYPRESSMASK, ft_key_binding, &m);
@@ -65,6 +61,6 @@ int				main(int argc, char **argv)
 		mlx_loop(m.mlx);
 	}
 	else
-		ft_exit("Please Enter 'mandelbrot', 'julia', or 'mandelbralt'");
+		ft_exit("Enter 'mandelbrot', 'julia', 'mandelbralt', or 'burningship'");
 	return (0);
 }
