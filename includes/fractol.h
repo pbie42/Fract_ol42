@@ -6,7 +6,7 @@
 /*   By: pbie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/08 18:06:29 by pbie              #+#    #+#             */
-/*   Updated: 2016/03/21 15:04:44 by pbie             ###   ########.fr       */
+/*   Updated: 2016/03/21 16:33:50 by pbie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,16 +42,16 @@
 # define HELLO "Fractol by pbie"
 # define START "Continue by pressing any key"
 # define L_CONTROLS "                 CONTROLS"
-# define L_PLUS "  More Iterations   ||     +"
-# define L_MINUS "  Less Iterations   ||     -"
+# define L_PLUS "  More Iterations   ||       +"
+# define L_MINUS "  Less Iterations   ||       -"
 # define L_PAGE_UP "  Zoom In           ||  Left Click or"
 # define L_SCROLL_D "                    ||  Scroll Down"
 # define L_PAGE_DOWN "  Zoom Out          ||  Right Click or"
 # define L_SCROLL_U "                    ||  Scroll Up"
-# define L_MANDEL "  Mandelbrot        ||  Press 1"
-# define L_JULIA "  Julia             ||  Press 2"
-# define L_MANDALT "  MandelALT         ||  Press 3"
-# define L_BURN "  Burning Ship      ||  Press 4"
+# define L_MANDEL "  Mandelbrot        ||       1"
+# define L_JULIA "  Julia             ||       2"
+# define L_MANDALT "  MandelbrALT       ||       3"
+# define L_BURN "  Burning Ship      ||       4"
 # define L_TRANS "  Transform Julia   ||  Move Mouse"
 # define L_OVER "                    ||  Over Fractal"
 # define L_HOLD "  Prevent Transform ||  Hold H"
